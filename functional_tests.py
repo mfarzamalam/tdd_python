@@ -35,8 +35,8 @@ class NewVisitorTest(unittest.TestCase):
         time.sleep(1)
 
         table = self.browser.find_element_by_id('id_table_list')
-        rows  = table.find_elements_by_tag_name('tr')
-        self.assertTrue(any(row.text == '1: Play the Piano') for row in rows)
+        rows  = table.find_element_by_tag_name('tr')
+        self.assertTrue(any(row.text == '1: Play the Piano' for row in rows), "New to-do item did not appear in table")
 
         # There's still a text-box asking him to enter another item.
         # He enter another item 'Come back home with dhaniya'
